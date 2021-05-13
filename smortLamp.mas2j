@@ -1,0 +1,18 @@
+/*
+    smortLamp
+    ---------------------------
+
+    Jason Project File
+
+    This file defines the initial state of the MAS
+
+    Jason 2.5.1
+    May 13, 2021 - 20:49:33
+*/
+
+MAS smortLamp {
+
+    infrastructure: Centralised
+
+    agents: sample_agent;
+}
