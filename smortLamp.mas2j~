@@ -13,6 +13,8 @@
 MAS smortLamp {
 
     infrastructure: Centralised
+    environment: SmortLamp
 
     agents: sample_agent;
+
 }
