@@ -23,13 +23,40 @@ import java.util.logging.Logger;
 
 
 public class SmortLamp extends Environment {
-    public class CustomGridModel extends GridWorldModel
-    {
-        public CustomGridModel() {
+    public class SmortLampModel extends GridWorldModel{
+        public SmortLampModel() {
             // Size of the map, num of agents to display
-            super(10, 10, 0);
+            super(12, 12, 1+3+4+1);
+
+	    try{
+		// junction controller
+            	setAgPos(0, 4, 8);
+		
+		// car1
+                setAgPos(1, 0, 6);
+		//car2
+		setAgPos(2, 5, 0);
+		// car3
+		setAgPos(3, 6,11);
+				
+		//lamp1
+		setAgPos(4, 4,7);
+		//lamp2
+		setAgPos(5, 4,4);
+		//lamp3
+		setAgPos(6, 7,4);
+		//lamp4
+		setAgPos(7, 7,7);
+		
+		//police
+		setAgPos(8,11,5);
+
+	    } catch (Exception e) {
+		e.printStackTrace();
+	    }
         }
 
+	
     }
 
     public class CustomGridView extends GridWorldView
