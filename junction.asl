@@ -41,4 +41,4 @@ L \== []; // constraint the plan execution to at least one offer
 // announce to others
 +!announce_result(Id,[offer(O,LAg)|T],WAg)
 <- .send(LAg,tell,reject_proposal(Id));
-!announce_result(CNPId,T,WAg).
+!announce_result(Id,T,WAg).
