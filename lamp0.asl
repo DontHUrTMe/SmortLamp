@@ -1,7 +1,7 @@
 // Agent sample_agent in project smortLamp
 /* Initial beliefs and rules */
 red.
-nocar.
+carNum(0).
 
 /* Initial goals */
 
