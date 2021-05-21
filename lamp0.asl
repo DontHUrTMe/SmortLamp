@@ -19,8 +19,11 @@ carNum(0).
 @r1 +accept_proposal(Id)
 : proposal(CNPId,Offer) :proposal(Id, Offer)
 <- .print("My proposal ’",Offer,"’ won ",Id,"!");
-+green.
++green;
+-red.
 
 @r2 +reject_proposal(Id)
 <- .print("I lost timeframe",Id, ".");
--proposal(Id,_). // clear memory
+-proposal(Id,_); // clear memory
+-green;
++red. 
