@@ -9,7 +9,7 @@ all_proposals_received(CNPId) :-
 !startITSA(1).
 
 /* plans */
-+!startCNP(Id)
++!startITSA(Id)
 <- .wait(100);
 +itsa_state(Id,propose);
 .send([lamp0, lamp1, lamp2, lamp3],tell,itsa(Id)).
@@ -28,7 +28,7 @@ L \== []; // constraint the plan execution to at least one offer
 .max(L,offer(WOf,WAg)); // sort offers, the first is the best
 .print("Winner is ",WAg," with ",WOf);
 !announce_result(Id,L,WAg);
--+itsa_state(Id,finished).
++!startITSA(Id+1).
 
 // nothing todo, the current phase is not ’propose’
 @lc2 +!contract(Id).
