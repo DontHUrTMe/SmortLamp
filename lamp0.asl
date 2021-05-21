@@ -17,7 +17,7 @@ carNum(0).
 .send(A,tell,propose(Id,carNum)).
 
 @r1 +accept_proposal(Id)
-: proposal(CNPId,Offer) :proposal(Id, Offer)
+: proposal(Id,Offer)
 <- .print("My proposal ’",Offer,"’ won ",Id,"!");
 +green;
 -red.
