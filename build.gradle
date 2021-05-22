@@ -18,7 +18,7 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
-
+    jcenter()
     maven { url "http://jacamo.sourceforge.net/maven2" }
     maven { url "https://raw.github.com/jacamo-lang/mvn-repo/master" }
     maven { url "https://jade.tilab.com/maven/" }
@@ -27,7 +27,8 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.jason',     name: 'jason' ,   version: '2.5.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile group: 'org.jason',     name: 'jason' ,   version: '2.6.3'
 }
 
 sourceSets {

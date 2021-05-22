@@ -1,7 +1,7 @@
 // Agent sample_agent in project smortLamp
 /* Initial beliefs and rules */
 red.
-carNum(1).
+carNum(4).
 
 /* Initial goals */
 
@@ -13,9 +13,9 @@ carNum(1).
 +red.
 
 @c1 +itsa(Id)[source(A)] : true
-<- ?carNum(C); 
-+proposal(Id, C); // remember my proposal
-.send(A,tell,propose(Id,C)).
+<-?carNum(B);
++proposal(Id, B); // remember my proposal
+.send(A,tell,propose(Id,B)).
 
 @r1 +accept_proposal(Id)
 : proposal(Id,Offer)

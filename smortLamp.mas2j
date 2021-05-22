@@ -16,9 +16,13 @@ MAS smortLamp {
     environment: SmortLamp
 
     agents: sample_agent;
-
+		junction;
         lamp0;
-
-        car;
-
+		lamp1;
+		lamp2;
+		lamp3;
+		car1;
+		car2;
+		car3;
+		police;
 }

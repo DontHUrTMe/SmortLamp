@@ -17,4 +17,8 @@ MAS smortLamp {
 
     agents: sample_agent;
 
+        lamp0;
+
+        car;
+
 }
