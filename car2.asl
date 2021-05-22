@@ -12,6 +12,11 @@
 +!go : lamp2 & not red & not green<- .send(lamp2,askOne,red);.send(lamp2,askOne,green);!go.
 +!go : lamp3 & not red & not green<- .send(lamp3,askOne,red);.send(lamp3,askOne,green);!go.
 
++!wait : lamp0 & red <- .send(lamp0,askOne,red);.send(lamp0,askOne,green);!wait.
++!wait : lamp1 & red <- .send(lamp1,askOne,red);.send(lamp1,askOne,green);!wait.
++!wait : lamp2 & red <- .send(lamp2,askOne,red);.send(lamp2,askOne,green);!wait.
++!wait : lamp3 & red <- .send(lamp3,askOne,red);.send(lamp3,askOne,green);!wait.
+
 +!go : red <- !wait.
 
 +!go : true <-
