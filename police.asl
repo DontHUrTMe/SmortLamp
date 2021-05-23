@@ -8,4 +8,5 @@
 /* Plans */
 
 +!go : true <-
+    move;
     !go.
