@@ -28,6 +28,7 @@ public class SmortLamp extends Environment {
         int id;
         int x;
         int y;
+        int w;
         public Car(int _id,int _x,int _y)
         {
             i=0;
@@ -38,18 +39,22 @@ public class SmortLamp extends Environment {
                 case 1:
                     xarr = new int[]{0,1,2,3,4,5,6,6,6,6,6,6,0,1,2,3,4,5,5,5,5,5,5};
                     yarr = new int[]{6,6,6,6,6,6,5,4,3,2,1,0,6,6,6,6,6,5,4,3,2,1,0};
+                    w=1;
                     break;
                 case 2:
                     xarr = new int[]{5,5,5,5,5,5,6,7,8,9,10,11,0,1,2,3,4,5,6,6,6,6,6};
                     yarr = new int[]{0,1,2,3,4,5,6,6,6,6,6,6,6,6,6,6,6,6,7,8,9,10,11};
+                    w=1;
                     break;
                 case 3:
                     xarr = new int[]{6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,4,3,2,1,0};
                     yarr = new int[]{11,10,9,8,7,6,5,4,3,2,1,0,0,1,2,3,4,5,5,5,5,5,5};
+                    w=1;
                     break;
                 case 0:
                     xarr = new int[]{11,10,9,8,7,6,6,6,6,6,6,6,6,6,6,6,6,5,4,3,2,1,0};
                     yarr = new int[]{5,5,5,5,5,5,4,3,2,1,0,11,10,9,8,7,6,5,5,5,5,5,5};
+                    w=100;
                     break;
             }
         }
@@ -116,22 +121,21 @@ public class SmortLamp extends Environment {
         {
             if (y==6&&x>=2&&4>=x)
             {
-                waitl0++;
+                waitl0+=w;
             } else if (x==5&&y>=2&&4>=y)
             {
-                waitl1++;
+                waitl1+=w;
             } else if(y==5&&x>=7&&9>=x)
             {
-                waitl2++;
+                waitl2+=w;
             }else if(x==6&&y>=7&&9>=y)
             {
-                waitl3++;
+                waitl3+=w;
             }
         }
 
         public void Move()
         {
-            addPercept("lamp0",Literal.parseLiteral("carNum(0)"));
             Draw();
             CheckAtLamp();
             Update();
